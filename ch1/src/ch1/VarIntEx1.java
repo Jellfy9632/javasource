@@ -12,8 +12,8 @@ public class VarIntEx1 {
     // 실수형 : float(4), double(8)
     // 불린형 : boolean(1)
 
-    // 변수선언 : 타임 변수명 = 값;
-    // 변수명 : 단어 2개가 조합되는 경우 뒷 단어의 시작은 대문자로 한다
+    // 변수선언 : 타입 변수명 = 값;
+    // 변수명 : 단어 2개가 조합되는 경우 뒷 단어의 시작은 대문자로 한다.
     // max-speed : 데이터베이스 필드명
     int age = 15, maxSpeed =100;
     int max = 256;
@@ -29,7 +29,7 @@ public class VarIntEx1 {
     System.out.println("나이 : "+age + ", 최고속도 : " + maxSpeed + ", max : "+max);
     System.out.println(age + maxSpeed);
 
-    // 형식화 된 출력(엔터는 안 들어가 있음)
+    // 형식화 된 출력(엔터는 안 들어가 있음) \n을 입력해 추가한다
     // %b : boolean, %d : 정수, %f : 실수 %s : 문자열, %c : 문자
     System.out.printf("나이 : %d , 최고속도 : %d, max : %d\n", age,maxSpeed,max);
     System.out.printf("나이 : %10d , 최고속도 : %d, max : %d\n ", age,maxSpeed,max);
