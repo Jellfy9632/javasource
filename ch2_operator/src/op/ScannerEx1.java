@@ -19,8 +19,6 @@ public class ScannerEx1 {
         
         scanner.close();
 
-        int A = 15;
-
     }
     
 }
