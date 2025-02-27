@@ -12,7 +12,6 @@ public class pr_experi2 {
 
         String fruit = " ", u_in = " ";
         char flav_f_cmp = ' ', flav1 = '단', flav2 = '신';
-        int u_in2 = 0;
 
         System.out.println("먹은 과일은 무슨 맛이었나요?\n1. 단, 2. 신, 3. 쓴 4. 짠");
 
