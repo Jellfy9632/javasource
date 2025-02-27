@@ -18,21 +18,36 @@ public class ForEx2 {
         // 7) 증감연산자 실행 i++ (i=2)
         // 8) 5~7반복
         // ...증감연산자 실챙 i++ (i=5)
-        //    조건검사 5<6 루프중단
+        // 조건검사 5<6 루프중단
 
+        // 1~10 출력하기
+
+        for (int i = 1; i < 11; i++) {
+            System.out.print(i + "   ");
+        }
+        System.out.println();
+
+        // 10~1 출력하기
+
+        for (int i = 10; i > 0; i--) {
+            System.out.print(i + "   ");
+        }
+        System.out.println();
 
         // 짝수만 출력 1~10
-        for (int i = 1; i > 11; i--) {
-            if (i % 2 == 0){
-            System.out.print(i+"   ");   
+        for (int i = 1; i < 11; i++) {
+            if (i % 2 == 0) {
+                System.out.print(i + "   ");
+            }
+
         }
-            
+        System.out.println();
+        
+        // i += 2; : i = i + 2;
+        for (int i = 2; i < 11; i += 2) {
+            System.out.print(i + "   ");
         }
 
-        // i += 2; : i = i + 2;
-        for(int i = 2; i < 11; i+=2){
-            System.out.println(i+" ");
-        }
     }
-    
+
 }

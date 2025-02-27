@@ -7,8 +7,33 @@ package loop;
 
 public class WhileEx2 {
     public static void main(String[] args) {
-        // 짝수만 출력 1~10
-        // for (int i = 1; i > 11; i--) {
+        
+          // 1~10 출력하기
+
+        //   for (int i = 1; i < 11; i++) {
+        //     System.out.print(i + "   ");
+        // }
+        // System.out.println();
+        int i = 1;
+        while (i <11){
+            System.out.print(i+" ");
+            i++;
+        }
+
+        System.out.println(" ");
+        // 10~1 출력하기
+
+        // for (int i = 10; i > 0; i--) {
+        //     System.out.print(i + "   ");
+
+        i = 10;
+        while (i > 0){
+            System.out.print(i+" ");
+            i--;
+        }
+
+        System.out.println(" ");
+        // for (int i = 1; i < 11; i++) {
         // if (i % 2 == 0){
         // System.out.print(i+" ");
         // }
@@ -16,17 +41,19 @@ public class WhileEx2 {
 
 
         // 짝수만 출력 1~10
-        int i = 1;
-        while (i > 11) {
+        i = 1;
+        while (i < 11) {
 
             if (i % 2 == 0) {
-                System.out.println(i + " ");
+                System.out.print(i + " ");
             }
-            i--;
+            i++;
         }
 
-        
+        System.out.println(" ");
+
         // i += 2; : i = i + 2;
+
         // for(int i = 2; i < 11; i+=2){
         // System.out.println(i+" ");
         // }
@@ -35,7 +62,7 @@ public class WhileEx2 {
 
         while (i < 11) {
             if (i % 2 == 0) {
-                System.out.println(i + " ");
+                System.out.print(i + " ");
             }
             i += 2;
         }
