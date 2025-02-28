@@ -42,12 +42,24 @@ public class ForEx2 {
 
         }
         System.out.println();
-        
+
         // i += 2; : i = i + 2;
         for (int i = 2; i < 11; i += 2) {
             System.out.print(i + "   ");
         }
 
+        // for 구문 사용시 정수선언은 조건 바깥에서도 가능하고 조건에서 첫 번째는 ;만 남겨 생략
+        // 조건에서 정수선언은 여러개 가능
+        // 조건에서 논리 연산이 가능
+        int i = 0;
+        for (int j = 0, k = 0; i < 0; i++) {
+        }
+
+        // 조건도 전부 생략이 가능함
+
+        // for(;;){
+
+        // }
     }
 
 }
