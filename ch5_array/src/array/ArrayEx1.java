@@ -7,7 +7,7 @@ package array;
 public class ArrayEx1 {
     public static void main(String[] args) {
         // 학생 100명의 점수를 입력
-        // int[] 배열명 = new int[100]; 배연선언 생성
+        // int[] 배열명 = new int[100]; 배열선언 생성
 
         int[] scores = new int[5];
 
@@ -21,7 +21,7 @@ public class ArrayEx1 {
         System.out.println("세 번째 학생:" + scores2[2]);
         System.out.println("배열 길이 : :" + scores2.length);
 
-        // 다섯벅내 학생 점수 수정
+        // 다섯 번 째 학생 점수 수정
 
         scores2[4] = 98;
         System.out.println("다섯번 째 학생 : " + scores2[4]);
