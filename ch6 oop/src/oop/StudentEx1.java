@@ -12,11 +12,10 @@ public class StudentEx1 {
         System.out.println(student2);
         System.out.println(student3);
 
-        // when i 16years old broke my leg i was running from brother and his friend
-        // it tasted sweet perfume on the mountain grass as i roll down
-        // i was younger than take me back to when i
-        // found my heart make them friends and lost them through the years
-        // i've not seen the roaring field in so long oh how we've grown
-    }
+        // 홍길동 전화번호 변경
 
+        student3.changeTel("010-1234-5678");
+        System.out.println(student3);
+
+    }
 }
