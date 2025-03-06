@@ -6,18 +6,42 @@ public class Student {
     // 속성 : 학번(s1024125), 이름(홍길동), 학년(1), 반(1), 전화번호(010-1234-1234),
     // 이메일(hong@gmail.com)
 
-    String stuId;
-    String name;
-    int grade;
-    int classnum;
-    String phone;
-    String email;
+    private String stuId;
+    private String name;
+    private int grade;
+    private int classnum;
+    private String phone;
+    private String email;
 
     // 생성자 : 개발자가 명시하지 않으면 컴파일러가 자동으로 default 생성자 만들어 줌
     // 클래스명(){}
 
     // 기본 생성자
     public Student() {
+    }
+
+    public String getStuId() {
+        return stuId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getGrade() {
+        return grade;
+    }
+
+    public int getClassnum() {
+        return classnum;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public String getEmail() {
+        return email;
     }
 
     // 생성자의 목적
