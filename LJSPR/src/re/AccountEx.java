@@ -96,6 +96,17 @@ public class AccountEx {
     }
 
     static private void withdraw() {
+        System.out.print("출금할 계좌 번호 : ");
+        String ano = sc.nextLine();
+        Account account = findAccount(ano);
+
+        if (account != null) {
+            System.out.print("출금 할 금액 : ");
+            int balance = Integer.parseInt(sc.nextLine());
+            account.withdraw(balance);
+        } else {
+            System.out.print("계좌 번호가 잘못 되었습니다\n");
+        }
     }
 
     static private Account findAccount(String ano) {
