@@ -1,28 +1,20 @@
 package shop;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
-public class Myshop implements IShop {
+public class Myshop2 implements IShop {
 
     private String title;
     Scanner sc = new Scanner(System.in);
 
     // 고객 5명 저장 가능한 배열 생성
 
-    // private User[] users = new User[5];
-    private List<User> userList = new ArrayList<>(5);
+    private User[] users = new User[5];
 
     // 제품 10개 저장 가능한 배열 생성
-    // Products[] products = new Products[10];
-
-    private List<Products> productsList = new ArrayList<>();
-
+    Products[] products = new Products[10];
     // cart (제품 저장 가능한 배열)
-    // Products[] cart = new Products[10];
-
-    private List<Products> cartList = new ArrayList<>();
+    Products[] cart = new Products[10];
 
     // start() 에서 선택된 user 보관 변수;
     private String sellUser;
@@ -35,28 +27,19 @@ public class Myshop implements IShop {
     @Override
     public void genUser() {
         // 2 명의 User 생성 후 배열객체에 담기
-        // users[0] = new User("깁갑룡", PayType.CARD);
-        // users[1] = new User("김기명", PayType.CASH);
-
-        userList.add(new User("모몬가", PayType.CASH));
-        userList.add(new User("알베도", PayType.CARD));
+        users[0] = new User("깁갑룡", PayType.CARD);
+        users[1] = new User("김기명", PayType.CASH);
     }
 
     @Override
     public void genProducts() {
 
         // 5개 제품 생성 후 배열객체에 담기 (tv2개, cellphone 3개
-        // products[0] = new Tv("삼성 QLED", 5000000, "4K");
-        // products[1] = new Tv("LG 울트라 HD", 4800000, "4K");
-        // products[2] = new CellPhone("아이폰", 1200000, "LG U+");
-        // products[3] = new CellPhone("갤럭시S8+", 1120000, "kt");
-        // products[4] = new CellPhone("베가아이언", 1200000, "SKT");
-
-        productsList.add(new Tv("삼성QLED", 10000, "4K"));
-        productsList.add(new Tv("LG 울트라 HD", 10000, "4K"));
-        productsList.add(new CellPhone("아이폰", 10000, "LG U+"));
-        productsList.add(new CellPhone("베가아이언", 10000, "kt"));
-        productsList.add(new CellPhone("갤럭시S8+", 10000, "SKT"));
+        products[0] = new Tv("삼성 QLED", 5000000, "4K");
+        products[1] = new Tv("LG 울트라 HD", 4800000, "4K");
+        products[2] = new CellPhone("아이폰", 1200000, "LG U+");
+        products[3] = new CellPhone("갤럭시S8+", 1120000, "kt");
+        products[4] = new CellPhone("베가아이언", 1200000, "SKT");
 
     }
 
@@ -64,9 +47,9 @@ public class Myshop implements IShop {
     public void start() {
         System.out.printf("%s : 메인화면 - 계정선택\n", title);
         System.out.println("================================");
-        for (int i = 0; i < productsList.size(); i++) {
-            if (userList.get(i) != null) {
-                System.out.printf("[%d]\t%s\t%s\n", i, userList.get(i).getName(), userList.get(i).getPayType());
+        for (int i = 0; i < products.length; i++) {
+            if (users[i] != null) {
+                System.out.printf("[%d]\t%s\t%s\n", i, users[i].getName(), users[i].getPayType());
             } else {
                 break;
             }
@@ -100,10 +83,10 @@ public class Myshop implements IShop {
     public void productsList() {
         System.out.printf("%s : 상품목록 - 상품선택\n", title);
         System.out.println("================================");
-        for (int i = 0; i < productsList.size(); i++) {
-            if (productsList.get(i) != null) {
+        for (int i = 0; i < products.length; i++) {
+            if (products[i] != null) {
                 System.out.printf("[%d] ", i);
-                productsList.get(i).printDetail();
+                products[i].printDetail();
                 System.out.println("-------------------------------");
                 System.out.println();
             } else {
@@ -132,7 +115,14 @@ public class Myshop implements IShop {
             case "3":
             case "4":
 
-                cartList.add(productsList.get(Integer.parseInt(input)));
+                for (int i = 0; i < cart.length; i++) {
+                    if (cart[i] == null) {
+                        cart[i] = products[Integer.parseInt(input)];
+                        break;
+
+                    }
+
+                }
                 productsList();
                 break;
 
@@ -143,10 +133,10 @@ public class Myshop implements IShop {
     }
 
     public void checkout() {
-        System.out.printf("%s : " + userList.get(Integer.parseInt(sellUser)).getName() + " - 체크아웃\n", title);
+        System.out.printf("%s : " + users[Integer.parseInt(sellUser)].getName() + " - 체크아웃\n", title);
         System.out.println("================================");
         int i = 0, sum = 0;
-        for (Products products : cartList) {
+        for (Products products : cart) {
             if (products != null) {
                 System.out.printf("[%d] %s (%d)\n", i++, products.getP_name(), products.getPrice());
                 sum += products.getPrice();
@@ -154,7 +144,7 @@ public class Myshop implements IShop {
             }
 
         }
-        System.out.println("결제방법 : " + userList.get(Integer.parseInt(sellUser)).getPayType());
+        System.out.println("결제방법 : " + users[Integer.parseInt(sellUser)].getPayType());
         System.out.printf("합계 : %d 원\n", sum);
         System.out.println("================================");
         System.out.println("[p]\t이전");
