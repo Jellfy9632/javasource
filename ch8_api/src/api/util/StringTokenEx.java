@@ -48,13 +48,16 @@ public class StringTokenEx {
         st = new StringTokenizer(source, "|");
         while (st.hasMoreTokens()) {
 
-            String token = st.nextToken();
-            // n());
-            // StringTokenizer st2 = new StringTokenizer(token |/)
+            String token = st.nextToken(); // 1,김천재,100,100,100
 
-            // String token = st.nextToken();
-            System.out.println(st);
+            StringTokenizer st2 = new StringTokenizer(token, ",");
+            while (st2.hasMoreTokens()) {
+                System.out.println(st2.nextToken());
+            }
+            System.out.println("----------------------------");
+
         }
+        System.out.println();
     }
 
 }

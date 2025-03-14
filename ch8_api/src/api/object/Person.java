@@ -30,6 +30,11 @@ public class Person {
     }
 
     @Override
+    public int hashCode() {
+        return this.id.hashCode();
+    }
+
+    @Override
     public String toString() {
         return "Person [id=" + id + ", name=" + name + "]";
     }
