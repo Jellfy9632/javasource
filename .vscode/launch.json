@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "FileEx2",
+            "request": "launch",
+            "mainClass": "io.FileEx2",
+            "projectName": "javasource_a7040f79"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
