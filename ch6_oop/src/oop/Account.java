@@ -1,5 +1,17 @@
 package oop;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@ToString // ToString 메소드 생성
+@AllArgsConstructor // 멤버변수 전체 생성자
+@NoArgsConstructor // default 생성자
+@Getter
+@Setter
+
 public class Account {
     // 속성 : 계좌 번호(ano), 예금주명(owner), 잔액(balance)
     // 110-10-0100 long
@@ -12,17 +24,17 @@ public class Account {
     private String ano;
     private String owner;
 
-    public long getBalance() {
-        return balance;
-    }
+    // public long getBalance() {
+    // return balance;
+    // }
 
-    public String getAno() {
-        return ano;
-    }
+    // public String getAno() {
+    // return ano;
+    // }
 
-    public String getOwner() {
-        return owner;
-    }
+    // public String getOwner() {
+    // return owner;
+    // }
 
     void deposit(long deposit) {
         this.balance += deposit;
@@ -40,8 +52,8 @@ public class Account {
         System.out.printf("%d원 출금완료\n", withdraw);
     }
 
-    public Account() {
-    }
+    // public Account() {
+    // }
 
     public Account(String ano, String owner, long balance) {
         this.balance = balance;
@@ -49,9 +61,10 @@ public class Account {
         this.owner = owner;
     }
 
-    @Override
-    public String toString() {
-        return "Account [balance=" + balance + ", ano=" + ano + ", owner=" + owner + "]";
-    }
+    // @Override
+    // public String toString() {
+    // return "Account [balance=" + balance + ", ano=" + ano + ", owner=" + owner +
+    // "]";
+    // }
 
 }
