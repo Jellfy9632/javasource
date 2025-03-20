@@ -5,7 +5,7 @@
 - @FunctionalInterface 컴파일 시 오류 검출 => 추상메서드가 하나인지 검증
 
 표준 API의 함수적 인터페이스
-1) consumer : 매개값은 있고, 리턴값 없음
+1) Consumer : 매개값은 있고, 리턴값 없음
  void accept(T t) : 받아서 소비
 2) Supplier : 매개값은 없고, 리턴값은 있음
 : 공급
